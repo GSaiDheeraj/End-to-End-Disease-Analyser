@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, flash, redirect
 from flask import request
 from flask import send_from_directory
-from flask_socketio import SocketIO
+#from flask_socketio import SocketIO
 
 import numpy as np
 import tensorflow
@@ -181,15 +181,15 @@ def send_file(filename):
     return send_from_directory(UPLOAD_FOLDER, filename)
 
 #logged in Home page
+
+# @app.route("/login")
+# def login():
+#     return render_template("login.html")
+
+# @app.route("/register")
+# def login1():
+#     return render_template("signup.html")
 @app.route("/")
-@app.route("/login")
-def login():
-    return render_template("login.html")
-
-@app.route("/register")
-def login1():
-    return render_template("signup.html")
-
 @app.route("/home")
 def index2():
     return render_template("home.html")
